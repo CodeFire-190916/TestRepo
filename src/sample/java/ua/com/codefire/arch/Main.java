@@ -8,12 +8,16 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+    private static final String WINDOW_TITLE = "Archiver";
+    private static final double WINDOW_WIDTH = 640D;
+    private static final double WINDOW_HEIGHT = 480D;
+
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("index.fxml"));
 
-        primaryStage.setTitle("Archiver");
-        primaryStage.setScene(new Scene(root, 200, 150));
+        primaryStage.setTitle(WINDOW_TITLE);
+        primaryStage.setScene(new Scene(root, WINDOW_WIDTH, WINDOW_HEIGHT));
         primaryStage.show();
     }
 
